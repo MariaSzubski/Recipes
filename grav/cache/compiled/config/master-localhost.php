@@ -1,10 +1,14 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1493004010,
-    'checksum' => 'da10f145af06026431cdd026a64b5ffa',
+    'timestamp' => 1493005513,
+    'checksum' => 'bd9fb622cddec9106749f097124c3507',
     'files' => [
         'user/config' => [
+            'media' => [
+                'file' => 'user/config/media.yaml',
+                'modified' => 1493005062
+            ],
             'plugins/archives' => [
                 'file' => 'user/config/plugins/archives.yaml',
                 'modified' => 1492621280
@@ -33,9 +37,13 @@ return [
                 'file' => 'user/config/site.yaml',
                 'modified' => 1493004009
             ],
+            'streams' => [
+                'file' => 'user/config/streams.yaml',
+                'modified' => 1493005062
+            ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1492621280
+                'modified' => 1493005513
             ]
         ],
         'system/config' => [
@@ -57,6 +65,10 @@ return [
             ]
         ],
         'user/plugins' => [
+            'plugins/admin' => [
+                'file' => 'user/plugins/admin/admin.yaml',
+                'modified' => 1493005051
+            ],
             'plugins/archives' => [
                 'file' => 'user/plugins/archives/archives.yaml',
                 'modified' => 1492621282
@@ -80,6 +92,10 @@ return [
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1492621284
+            ],
+            'plugins/login' => [
+                'file' => 'user/plugins/login/login.yaml',
+                'modified' => 1493005049
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
@@ -105,6 +121,57 @@ return [
     ],
     'data' => [
         'plugins' => [
+            'admin' => [
+                'enabled' => true,
+                'route' => '/admin',
+                'cache_enabled' => false,
+                'theme' => 'grav',
+                'logo_text' => '',
+                'body_classes' => '',
+                'sidebar' => [
+                    'activate' => 'tab',
+                    'hover_delay' => 100,
+                    'size' => 'auto'
+                ],
+                'dashboard' => [
+                    'days_of_stats' => 7
+                ],
+                'widgets' => [
+                    'dashboard-maintenance' => true,
+                    'dashboard-statistics' => true,
+                    'dashboard-notifications' => true,
+                    'dashboard-feed' => true,
+                    'dashboard-pages' => true
+                ],
+                'session' => [
+                    'timeout' => 1800
+                ],
+                'warnings' => [
+                    'delete_page' => true
+                ],
+                'edit_mode' => 'normal',
+                'show_github_msg' => true,
+                'google_fonts' => true,
+                'enable_auto_updates_check' => true,
+                'notifications' => [
+                    'feed' => true,
+                    'dashboard' => true,
+                    'plugins' => true,
+                    'themes' => true
+                ],
+                'popularity' => [
+                    'enabled' => true,
+                    'ignore' => [
+                        0 => '/test*',
+                        1 => '/modular'
+                    ],
+                    'history' => [
+                        'daily' => 30,
+                        'monthly' => 12,
+                        'visitors' => 20
+                    ]
+                ]
+            ],
             'archives' => [
                 'enabled' => true,
                 'built_in_css' => true,
@@ -261,6 +328,51 @@ return [
                         0 => 'image/*'
                     ]
                 ]
+            ],
+            'login' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'route' => NULL,
+                'redirect_after_login' => NULL,
+                'route_register' => false,
+                'route_activate' => '/activate_user',
+                'route_forgot' => '/forgot_password',
+                'route_reset' => '/reset_password',
+                'route_profile' => '/user_profile',
+                'parent_acl' => false,
+                'protect_protected_page_media' => false,
+                'user_registration' => [
+                    'enabled' => true,
+                    'fields' => [
+                        0 => 'username',
+                        1 => 'password',
+                        2 => 'email',
+                        3 => 'fullname',
+                        4 => 'title'
+                    ],
+                    'access' => [
+                        'site' => [
+                            'login' => 'true'
+                        ]
+                    ],
+                    'options' => [
+                        'validate_password1_and_password2' => true,
+                        'set_user_disabled' => false,
+                        'login_after_registration' => true,
+                        'send_activation_email' => false,
+                        'send_notification_email' => false,
+                        'send_welcome_email' => false
+                    ]
+                ],
+                'rememberme' => [
+                    'enabled' => true,
+                    'timeout' => 604800,
+                    'name' => 'grav-rememberme'
+                ],
+                'max_pw_resets_count' => 0,
+                'max_pw_resets_interval' => 60,
+                'max_login_count' => 0,
+                'max_login_interval' => 2
             ],
             'pagination' => [
                 'enabled' => true,

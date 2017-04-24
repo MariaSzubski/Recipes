@@ -1,14 +1,10 @@
 ---
 title: Beaver Builder post
 description:
-  - option: Dificulty:
-    value: simple
-  - option: Serving:
+  - option: Servings:
     value: 4
   - option: Preparation time:
     value: 1 hour 30 minutes
-  - option: What we need:
-    value: oven, tart form, jar
 date: 17:34 01/01/2015
 taxonomy:
     category: Cakes

@@ -1,11 +1,10 @@
 ---
 title: Contact
 form:
-    name: my-nice-form
+    name: recipe-contact
     fields:
         - name: name
           label: Name
-          placeholder: Enter your name
           autofocus: on
           autocomplete: on
           type: text
@@ -14,7 +13,6 @@ form:
 
         - name: email
           label: Email
-          placeholder: Enter your email address
           type: text
           validate:
             rule: email
@@ -23,14 +21,13 @@ form:
         - name: message
           label: Message
           size: long
-          placeholder: Enter your message
           type: textarea
           validate:
             required: true
 
     buttons:
         - type: submit
-          value: Submit
+          value: Send
           classes: btn
 
     process:

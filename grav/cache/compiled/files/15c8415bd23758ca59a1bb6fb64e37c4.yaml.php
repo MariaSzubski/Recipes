@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/mariaszubski/Design/GitHub/recipes/grav/user/config/system.yaml',
-    'modified' => 1492621280,
+    'modified' => 1493005513,
     'data' => [
         'home' => [
             'alias' => '/blog'
